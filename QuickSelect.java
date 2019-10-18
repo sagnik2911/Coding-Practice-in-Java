@@ -54,7 +54,7 @@ public class QuickSelect
 		int pivotIndex = right;
 
 		pivotIndex = partition(A, left, right, pivotIndex);
-		System.out.println(pivotIndex);
+		//System.out.println(pivotIndex);
 		// The pivot is in its final sorted position
 		if (k == pivotIndex) {
 			return A[k];
@@ -79,5 +79,12 @@ public class QuickSelect
 
 		System.out.print("K'th smallest element is "
 						+ quickSelect(A, 0, A.length - 1, k));
+		System.out.println();
+		int count = A.length; 
+		for (int i = 0; i < count; i++) {
+			
+			System.out.print(A[i] + " ");
+		}
+		System.out.println();
 	}
 }

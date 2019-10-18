@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class UserInput {
+public class FindKfrequentrunner{
 	public static void main(String[] args){
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Input Array Length: ");
@@ -13,17 +13,11 @@ public class UserInput {
 		}
 		System.out.print("The Input array is: ");
 		output(array);
-		int a[] = array;
 		System.out.print("Enter the element you want to find: ");
 		int k = Integer.parseInt(scan.next());
-		SoolutionFindK sort = new SoolutionFindK();
-		int output = sort.findKthLargest(array,k);
-		System.out.println("The element at the position is: "+output);
-		
-		//QuickSort quicksort = new QuickSort();
-		//int out[] = quicksort.sort(a,0,array.length-1);
-		System.out.print("The sorted array is: ");
-		output(array);
+		TopKFrequent run = new TopKFrequent();
+		int out[] = run.topKFrequent(array,k);
+		output(out);
 	}
 	public static void output(int[] A){
 		int count = A.length; 
